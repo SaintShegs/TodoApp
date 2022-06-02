@@ -20,12 +20,15 @@
                     <ul>
                         {% if request.user.is_authenticated %}
                         <span>Welcome: <b>{{request.user.username}}</b></span>
-                        <a href="/change-password">Change password</a>
-                        <a href="/logout">Log out</a>
-                        {% else %}
-                        <a href="/">Login</a>
-                        <a href="/signup">Sign up</a>
-                        {% endif %}
+                        <div class="navba">
+
+                            <a href="/change-password">Change password</a>
+                            <a href="/logout">Log out</a>
+                            {% else %}
+                            <a href="/">Login</a>
+                            <a href="/signup">Sign up</a>
+                            {% endif %}
+                        </div>
                     </ul>
 
                 </div>

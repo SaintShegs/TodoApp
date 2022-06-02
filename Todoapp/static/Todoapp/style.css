@@ -9,12 +9,23 @@ body {
 }
    
 .create_form{
-    width: 50%;
+    width: 350px;
     padding: 30px;
     margin: auto;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(48, 46, 77, 0.25);
     
+}
+form{
+    width: 100%;
+}
+textarea{
+    width: 100%;
+    height: 100px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 
 .form-control{
@@ -23,7 +34,13 @@ body {
 
 input{
     width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
 }
+
 
 .card-header{
     display: flex;
@@ -36,7 +53,7 @@ input{
 
 
 .login{
-    width: 25%;
+    width: 300px;
     margin: auto;
     border-style: solid;
     border-radius: 5px;
@@ -83,4 +100,46 @@ label{
 
 .row{
     flex-wrap: wrap;
+}
+
+.navba{
+    display:flex;
+    gap:20px;
+}
+.col-4, .offset-4 {
+    margin-left: 0px !important;
+    width: 450px !important;
+    margin:auto !important;
+ }
+
+
+@media (max-width: 450px){
+    
+    .option{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      
+    }
+    .top{
+        padding:0px;
+    }
+    .top ul{
+        gap:10px;
+    }
+    .navba{
+        gap:10px;
+    }
+   .col-4, .offset-4 {
+      margin-left: 0px !important;
+      width: 300px !important;
+      margin:auto !important;
+   }
+  
+   .card-footer{
+    display: flex !important;
+    flex-direction: column !important;;
+    gap: 10px !important;
+   }
+
 }

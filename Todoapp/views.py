@@ -118,7 +118,7 @@ class SignupView(generic.CreateView):
     form_class=CustomUserCreationForm
 
     def get_success_url(self):
-        return reverse("Todoapp:Login")
+        return reverse("todos:Login")
 
 
     
