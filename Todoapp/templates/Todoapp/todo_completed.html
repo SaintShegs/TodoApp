@@ -1,0 +1,77 @@
+{% extends 'base.html' %}
+
+
+
+
+
+
+{% block content %}
+        <div class="text-center">
+            <h3>
+                {% if request.user.is_authenticated %}
+        
+                <!-- {{request.user.username}} -->
+
+               <p>Here are your completed tasks</p>
+
+        
+                {% else %}
+                <p>Hello Anonymous</p>
+                {% endif %}
+            </h3>
+
+            <a class="btn btn-primary" href="/create">Create a To-do</a>
+            
+            <a href="/pending" class="btn btn-primary">Pending</a>
+            <a href="/completed" class="btn btn-primary">Completed</a>
+            <a href="/task_lists" class="btn btn-primary">All Tasks</a>
+
+            <!-- <label for="filter">Filter:</label>
+                <select name="filter" id="">
+                    <option value="True">Completed</option>
+                    <option value="False">Pending</option>
+                </select>
+             -->
+        </div>
+        
+
+
+
+        <!-- <div class="col-4 offset-4"> -->
+        <div class="row">
+
+        {% for todo in todo_list  %}
+            <div class="col-sm">
+            <div class="card mt-3">
+
+                <div class="card-header">
+                    <a class="link" href="/{{ todo.id }}">{{ todo.name }}</a>
+                    <p><b>Created</b>: {{todo.date_created }} </p>
+                </div>
+                
+                <div class="card-body">
+                    {{todo.details}}
+                    
+                </div>
+               
+                
+                <div class="card-body">
+                    <p> <b>Due by</b>: {{todo.due_date}}</p>
+                </div>
+
+                <div class="card-footer">
+                    <p><b>Completed</b>: {{todo.completed}}</p>
+                </div>
+
+            </div>
+            </div>
+        {% endfor %}
+
+        </div>
+
+
+{% endblock content %}
+
+  
+ 
+

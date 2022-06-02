@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+
+
+
+
+
+
+{% block content %}
+
+
+    <div class="create_form"> 
+        <h4>Create a To-do</h4>
+
+        <form method="POST">
+            {% csrf_token %}
+            <!-- <input type="text" name="name" id="">
+            <input type="text" name="due_date" id=""> -->
+            
+            {{ form.as_p }}
+           
+            <button class="btn btn-primary" type="submit">Submit</button>
+            <a href="/task_lists" class="btn btn-primary">Cancel</a>
+        </form>
+
+    </div>
+
+
+{% endblock content %}
+
+
+
+  

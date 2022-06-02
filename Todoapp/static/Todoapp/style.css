@@ -1,0 +1,86 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f1f1f1;
+}
+   
+.create_form{
+    width: 50%;
+    padding: 30px;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(48, 46, 77, 0.25);
+    
+}
+
+.form-control{
+    width: 100%;
+}
+
+input{
+    width: 100%;
+}
+
+.card-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link{
+    text-decoration: none;
+}
+
+
+.login{
+    width: 25%;
+    margin: auto;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 20px;
+    
+}
+
+.login button{
+    width: 100%;
+   
+}
+
+label{
+    font-size: larger;
+    font-weight: bolder;
+
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 50px;
+    height: 70px;
+    align-items: center;
+    border-bottom: 1px solid;
+    margin-bottom: 20px;
+}
+.top ul{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+}
+.top ul span{
+    font-weight: bolder;
+    justify-content: center;
+}
+.top ul span b{
+    text-transform: uppercase;
+}
+.top ul a, .top h3 a{
+    text-decoration: none;
+}
+
+.row{
+    flex-wrap: wrap;
+}

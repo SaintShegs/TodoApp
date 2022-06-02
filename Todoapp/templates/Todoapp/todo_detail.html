@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+
+
+
+
+
+{% block content %}
+<div class="col-4 offset-4">
+    <div class="card mt-3">
+        <div class="card-header">
+            <a class="link" href="/{{ todo.id }}">{{ todo.name }}</a>
+        </div>
+        <div class="card-body">
+            <p> <b>Due by</b>: {{todo.due_date}}</p>
+        </div>
+
+        <div class="card-footer">
+            <a class="btn btn-secondary" href="/{{ todo.id }}/update">Update this To-do</a>
+            <a class="btn btn-secondary" href="/{{ todo.id }}/delete">Delete this To-do</a>
+            <a class="btn btn-secondary" href="/task_lists">Cancel</a>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+
+    <!-- {% if request.user.is_authenticated %}
+
+    Hello, {{request.user.username}}
+
+    {% else %}
+    Hello, anonymous user,
+    {% endif %} -->
+
+    
+
+    
+
+{% endblock content %}
+
+
+
+
+
